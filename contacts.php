@@ -34,7 +34,7 @@ include "admin/koneksi.php";
   <div class="col-lg-6">
     <div class="col-2">
       <h2>Contact Form</h2>
-      <form action="admin/savemsg.php" id="form1">
+      <form action="admin/savemsg.php" id="form1" method="POST">
         <fieldset>
           <label>Your Name:
             <input type="text" name="nama">

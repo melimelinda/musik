@@ -32,7 +32,7 @@ include "admin/koneksi.php";
       <h2>Video</h2>
       <div class="p0">
          <?php 
-          $query=mysqli_query($con,"SELECT * FROM vidio ORDER BY id_vidio ASC");
+          $query=mysqli_query($con,"SELECT * FROM vidio ORDER BY id_vidio DESC");
           $i=1;
           while($var=mysqli_fetch_array($query)){
             # code...
@@ -47,7 +47,7 @@ include "admin/koneksi.php";
           }
          ?>
       </div>
-      <p><a href="#">Download Lilly Watson - One More Chance Music Video</a></p>
+      <!-- <p><a href="#">Download Lilly Watson - One More Chance Music Video</a></p> -->
     </div>
     <div class="col-3">
       <?php include "col3.php" ?>

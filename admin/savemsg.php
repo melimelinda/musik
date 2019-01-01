@@ -7,6 +7,6 @@ $kota   = $_POST['kota'];
 $pesan   = $_POST['pesan'];
 
 mysqli_query($con,"INSERT INTO pesan(nama,email,kota,pesan)
-VALUES('$nama','$email','$kota','$pesan')")or die("Database Tidak Bisa Di Buka ");
+VALUE('$nama','$email','$kota','$pesan')")or die("Database Tidak Bisa Di Buka ");
 header('location:../contacts.php');
 ?>

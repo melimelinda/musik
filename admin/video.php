@@ -51,6 +51,30 @@ include "koneksi.php";
         </fieldset>
       </form>
     </div>
+    <table class="dates" cellpadding="0" cellspacing="0" border="0">
+        
+        <tr class="thead">
+          <td class="col2">Singer</td>
+          <td class="col1">Link of Video</td>
+          <td class="col2"><a href="#"></td>
+        </tr>
+        <tr class="even">
+          <?php 
+          $query=mysqli_query($con,"SELECT * FROM vidio ORDER BY id_vidio DESC");
+          $i=1;
+          while($var=mysqli_fetch_array($query)){
+            # code...
+         ?>
+          <td class="col1"><?php echo "$var[artis]"; ?><br>
+          <td><?php echo "images/$var[link_vidio]"; ?></td>
+          
+          <td><a <?php echo "href='deletevidio.php?id_vidio=$var[id_vidio]'"; ?>><img src="../images/delete.png" alt="" height="30px" width="30px";></a>
+        </tr>
+        <?php 
+        $i++;
+          }
+         ?>
+      </table>
     </div>
     <?php include "../col3.php" ?>
   </article>

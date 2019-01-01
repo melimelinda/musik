@@ -90,8 +90,7 @@ include "koneksi.php";
           <td class="col1"><?php echo "$var[penyanyi]"; ?><br>
           <td><?php echo "$var[judul_lagu]"; ?></td>
           <td><?php echo "$var[lirik]"; ?></td>
-          <td><a <?php echo "href='deletemusik.php?id_musik=$var[id_musik]'"; ?>><img src="../images/delete.png" alt="" height="30px" width="30px";></a>
-          <a <?php echo "href='formeditmusik.php?id_musik=$var[id_musik]'"; ?>><img src="../images/edit.png" alt="" height="30px" width="30px";></a></td>
+          <td><a <?php echo "href='deletemusik.php?id_musik=$var[id_musik]'"; ?>><img src="../images/delete.png" alt="" height="30px" width="30px";></a></td>
         </tr>
         <?php 
         

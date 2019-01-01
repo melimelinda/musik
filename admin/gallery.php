@@ -73,8 +73,8 @@ include "koneksi.php";
           <td class="col1"><?php echo "$var[nama]"; ?><br>
           <td><?php echo "images/$var[gambar]"; ?></td>
           <td><?php echo "$var[ket]"; ?></td>
-          <td><a <?php echo "href='deletemusik.php?id_gambar=$var[id_gambar]'"; ?>><img src="../images/delete.png" alt="" height="30px" width="30px";></a>
-          <a <?php echo "href='formeditmusik.php?id_gambar=$var[id_gambar]'"; ?>><img src="../images/edit.png" alt="" height="30px" width="30px";></a></td>
+          <td><a <?php echo "href='deletegambar.php?id_gambar=$var[id_gambar]'"; ?>><img src="../images/delete.png" alt="" height="30px" width="30px";></a>
+          <a <?php echo "href='formeditgambar.php?id_gambar=$var[id_gambar]'"; ?>><img src="../images/edit.png" alt="" height="30px" width="30px";></a></td>
         </tr>
         <?php 
         $i++;

@@ -40,58 +40,31 @@ include "koneksi.php";
   <article id="content">
     <?php include "../col1.php" ?>
     <div class="col-2">
-      <!-- <h2>Latest Tweets</h2>
-      <div class="und">
-        <?php 
-          $query=mysqli_query($con,"SELECT * FROM pesan ORDER BY id_pesan DESC");
-          $i=1;
-          while($var=mysqli_fetch_array($query)){
-            # code...
-         ?>
-        <p><?php echo "$var[nama]"; ?><br>
-          <?php echo "$var[kota]"; ?><br>
-          <?php echo "$var[pesan]"; ?><br>
-          <?php echo "$var[email]"; ?>
-        </p>
-          <?php 
-        $i++;
-          }
-         ?>
-        
-      </div> -->
       <h2>Contact Form</h2>
-      <form action="editkontak.php" id="form1" method="POST">
+      <form action="editgambar.php" id="form1" method="POST" enctype="multipart/form-data">
         <fieldset>
           <?php
-          $id_kontak=$_GET['id_kontak'];
-          $query=mysqli_query($con,"select * from kontak where id_kontak='$id_kontak'");
+          $id_gambar=$_GET['id_gambar'];
+          $query=mysqli_query($con,"select * from gambar where id_gambar='$id_gambar'");
                       while($row=mysqli_fetch_array($query)){
                     ?>
-          <input class="form-control" id="nama" name="id_kontak" type="hidden" value="<?php echo $row['id_kontak'];?>" required />
-          <label>Name         :
-            <input type="text" name="name" value="<?php echo $row['nama'];?>">
+          <input class="form-control" id="nama" name="id_gambar" type="hidden" value="<?php echo $row['id_gambar'];?>" required />
+          <label>Name:
+            <input type="text" name="nama" value="<?php echo $row['nama'];?>">
           </label>
-          <label>Country      :
-            <input type="text" name="country" value="<?php echo $row['negara'];?>">
+          <label>Picture:
+            <input type="file" name="gambar" value="<?php echo $row['gambar'];?>">
           </label>
-          <label>City:
-            <input type="text" name="city" value="<?php echo $row['kota'];?>">
+          <label>Descryption:
+            <input type="text" name="ket" value="<?php echo $row['ket'];?>">
           </label>
-          <label>No. Telephone:
-            <input type="number" name="notelp" value="<?php echo $row['notelp'];?>">
+          <!-- <label>Genre:
+            <input type="text" name="genre" value="<?php echo $row['genre'];?>">
           </label>
-          <label>E-mail       :
-            <input type="email" name="email" value="<?php echo $row['email'];?>">
-          </label>
-          <label>Tweeter      :
-            <input type="text" name="tw" value="<?php echo $row['tw'];?>">
-          </label>
-          <label>facebook     :
-            <input type="text" name="fb" value="<?php echo $row['fb'];?>">
-          </label>
-          <label>Instagram    :
-            <input type="text" name="ig" value="<?php echo $row['ig'];?>">
-          </label>
+          <label>Lyrics:
+            <input type="text" name="lirik" value="<?php echo $row['lirik'];?>">
+          </label> -->
+          
           <div class="btns">
             <button class="btn btn-primary" type="submit">Update</button>
             <a href="contacts.php"><button class="btn btn-default" type="button">Cancel</button></a> 
