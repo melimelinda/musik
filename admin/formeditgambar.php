@@ -41,7 +41,7 @@ include "koneksi.php";
     <?php include "../col1.php" ?>
     <div class="col-2">
       <h2>Contact Form</h2>
-      <form action="editgambar.php" id="form1" method="POST" enctype="multipart/form-data">
+      <form action="editgambar.php" id="form1" method="POST">
         <fieldset>
           <?php
           $id_gambar=$_GET['id_gambar'];

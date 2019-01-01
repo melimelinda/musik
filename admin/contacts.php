@@ -47,10 +47,11 @@ include "koneksi.php";
           while($var=mysqli_fetch_array($query)){
             # code...
          ?>
-        <p><?php echo "$var[nama]"; ?><br>
-          <?php echo "$var[kota]"; ?><br>
-          <?php echo "$var[pesan]"; ?><br>
-          <?php echo "$var[email]"; ?>
+        <p>
+          <h3 style="color: red"><?php echo "$var[nama]"; ?><br></h3>
+          <h5 style="color: green"><?php echo "$var[kota]"; ?><br></h5>
+          <h5><?php echo "$var[pesan]"; ?><br></h5>
+          <h5 style="color: green"><?php echo "$var[email]"; ?></h5>
         </p>
           <?php 
         $i++;
