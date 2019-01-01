@@ -12,7 +12,7 @@ include "koneksi.php";
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Lilly Watson | Tour Dates</title>
+<title>MM Music | Tour Dates</title>
 <meta charset="UTF-8">
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/layout.css" rel="stylesheet" type="text/css" />

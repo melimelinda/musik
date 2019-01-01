@@ -12,7 +12,7 @@ include "koneksi.php";
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Lilly Watson | Audio</title>
+<title>MM Music | Audio</title>
 <meta charset="UTF-8">
 <script type="text/javascript" src="../tinymce/tiny_mce.js"></script>
 <script type="text/javascript">

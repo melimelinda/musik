@@ -5,7 +5,7 @@ include "admin/koneksi.php";
   <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Lilly Watson | Audio</title>
+<title>MM Music | Audio</title>
 <meta charset="UTF-8">
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
