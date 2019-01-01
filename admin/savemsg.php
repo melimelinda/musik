@@ -3,7 +3,7 @@ include "koneksi.php";
 
 $nama   = $_POST['nama'];
 $email   = $_POST['email'];
-$kota   = $_POST['kota'];
+$kota   = $_POST['kota']; 
 $pesan   = $_POST['pesan'];
 
 mysqli_query($con,"INSERT INTO pesan(nama,email,kota,pesan)

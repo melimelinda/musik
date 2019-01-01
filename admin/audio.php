@@ -45,7 +45,7 @@ include "koneksi.php";
     <div class="col-2">
       <h2>Audio</h2>
       <div class="col-2">
-      <form action="saveaudio.php" id="form1" method="POST" enctype="multipart/form-data">
+      <form action="upload.php" id="form1" method="POST" enctype="multipart/form-data">
         <fieldset>
           <!-- <input type="hidden" name="id"> -->
           <label>Singer:
@@ -55,7 +55,7 @@ include "koneksi.php";
             <input type="text" name="judul">
           </label>
           <label>Music:
-            <input type="file" name="musik">
+            <input type="file" name="audioFile"/>
           </label>
           <label>Genre:
             <input type="text" name="genre">
@@ -63,7 +63,8 @@ include "koneksi.php";
           Lyrics:
             <p align="right"><textarea name="lirik"></textarea></p> 
           <div class="btns">
-            <button class="btn btn-primary" type="submit">Save</button>
+            
+            <input type="submit" value="Upload Audio" name="save_audio"/>
           </div>
         </fieldset>
       </form>
@@ -79,10 +80,12 @@ include "koneksi.php";
         </tr>
         <tr class="even">
           <?php 
-          $query=mysqli_query($con,"SELECT * FROM musik ORDER BY id_musik DESC");
-          $i=1;
-          while($var=mysqli_fetch_array($query)){
-            # code...
+            if (!$con) {
+              die('server tidak konek');
+            }
+            $query="select * from musik order by id_musik desc";
+            $r=mysqli_query($con,$query);
+            while ($var = mysqli_fetch_array($r)) {
          ?>
           <td class="col1"><?php echo "$var[penyanyi]"; ?><br>
           <td><?php echo "$var[judul_lagu]"; ?></td>
@@ -91,7 +94,8 @@ include "koneksi.php";
           <a <?php echo "href='formeditmusik.php?id_musik=$var[id_musik]'"; ?>><img src="../images/edit.png" alt="" height="30px" width="30px";></a></td>
         </tr>
         <?php 
-        $i++;
+        
+              
           }
          ?>
       </table>

@@ -36,20 +36,16 @@ include "admin/koneksi.php";
       <ul class="audio">
         <?php 
           $query=mysqli_query($con,"SELECT * FROM musik ORDER BY id_musik DESC");
-          $i=1;
-          while($var=mysqli_fetch_array($query)){
-            # code...
+            while ($var = mysqli_fetch_array($query)) {
          ?>
         
-      <!-- <div class="img-box fl"> 
-        <a href="#" rel="prettyPhoto[pp_gal]"><img src="<?php echo "admin/images/$var[gambar]"; ?>" alt="" height="200px" width="200px";><br></a> 
-      </div> -->
-        
-        <li><a href="#"><?php echo "$var[penyanyi]"; ?> - <?php echo "$var[judul_lagu]"; ?></a> <span class="info"></span> <a <?php echo "href='lirik.php?id_musik=$var[id_musik]'"; ?>>Lyrics</a>
-          <div class="cntrls"><a href="#" class="mute"></a><span class="separator"></span><a href="#" class="play"></a></div>
+        <li><span class="info"><?php echo "$var[penyanyi]"; ?> - <?php echo "$var[judul_lagu]"; ?></span> 
+          <?php echo '<a href="play.php?name='.$var['file'].'">'.$var['file'].'</a>'; ?>
+          <a <?php echo "href='lirik.php?id_musik=$var[id_musik]'"; ?>>Lyrics</a>
         </li>
         <?php 
-        $i++;
+        
+              
           }
          ?>
     </div>

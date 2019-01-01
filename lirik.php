@@ -34,6 +34,7 @@ include "admin/koneksi.php";
     <div class="col-2">
       <h2>Lyrics</h2>
       <ul class="audio">
+        
         <?php
           $id_musik=$_GET['id_musik'];
           $query=mysqli_query($con,"select * from musik where id_musik='$id_musik'");
